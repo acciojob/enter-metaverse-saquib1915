@@ -1,6 +1,10 @@
-let button = document.getElementById("enterBtn");
+let enterBtn = document.getElementById("enterBtn");
 let status = document.getElementById("status");
 
-button.onclick = function () {
-    status.innerHTML = "<h1>Entered Metaverse</h1>";
-};
+enterBtn.addEventListener("click", function () {
+    let heading = document.createElement("h1");
+    heading.textContent = "Entered Metaverse";
+
+    status.innerHTML = "";
+    status.appendChild(heading);
+});
